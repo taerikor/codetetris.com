@@ -3,22 +3,19 @@ import { Link,graphql } from "gatsby"
 import { css } from "@emotion/react"
 import { rhythm } from "../utils/typography"
 import Layout from "../components/layout"
+import Profile from '../components/profile'
 
 export default function Home({ data }) {
   console.log(data)
   return (
     <Layout>
       <div>
-        <h1
-          css={css`
-            display: inline-block;
-            border-bottom: 1px solid;
-          `}
-        >
-        </h1>
-        <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
+        <Profile author={data.site.siteMetadata.author} />
         {data.allMarkdownRemark.edges.map(({ node }) => (
-          <div key={node.id}>
+          <div key={node.id}
+              css={css`
+              margin-top: 30px;
+            `}>
                         <Link
               to={node.fields.slug}
               css={css`
@@ -32,15 +29,17 @@ export default function Home({ data }) {
               `}
             >
               {node.frontmatter.title}{" "}
-              <span
+              <p
                 css={css`
+                  margin-top:10px;
                   color: #bbb;
+                  font-size:15px;
                 `}
               >
-                — {node.frontmatter.date}
-              </span>
+              {node.frontmatter.date}
+              </p>
             </h3>
-            <p>{node.excerpt}</p>
+            <p>{node.frontmatter.description}</p>
             </Link>
           </div>
         ))}
@@ -51,21 +50,29 @@ export default function Home({ data }) {
 
 export const query = graphql`
   query {
-    allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
-      totalCount
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            date(formatString: "DD MMMM, YYYY")
-          }
-          fields {
-            slug
-          }
-          excerpt
+  allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
+    totalCount
+    edges {
+      node {
+        id
+        frontmatter {
+          title
+          date(formatString: "MMMM DD, YYYY")
+          description
         }
+        fields {
+          slug
+        }
+        excerpt
       }
     }
   }
+  site{
+		siteMetadata
+    {
+    author
+    }
+  }
+}
+
 `

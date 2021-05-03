@@ -20,7 +20,7 @@ export default function Layout({ children }) {
     <div
       css={css`
         margin: 0 auto;
-        max-width: 800px;
+        max-width: 700px;
         padding: ${rhythm(2)};
         padding-top: ${rhythm(1.5)};
       `}
@@ -36,15 +36,16 @@ export default function Layout({ children }) {
             {data.site.siteMetadata.title}
         </h3>
       </Link>
-      <Link
-        to={`/about/`}
+      {children}
+      <div 
         css={css`
-          float: right;
+        position: absolute;
+        bottom: 0;
+        padding-bottom: 20px;
         `}
       >
-        About
-      </Link>
-      {children}
+      ©{data.site.siteMetadata.title} All rights reserved
+      </div>
     </div>
   )
 }

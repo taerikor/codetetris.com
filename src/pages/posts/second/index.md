@@ -1,5 +1,6 @@
 ---
 title: 두번째 게시글
+description: 테스트 게시글 입니다.
 date: 2021-05-04
 tags:
   - 자바스크립트
