@@ -1,14 +1,11 @@
 import React from "react"
 import Layout from "../components/layout"
 
-export default function Error() {
+export default function NotFoundPage() {
   return (
     <Layout>
-      <h1>404</h1>
-      <p>
-        We're the only site running on your computer dedicated to showing the
-        best photos and videos of pandas eating lots of food.
-      </p>
+          <h1>Not Found</h1>
+          <p>I haven’t written this post yet. Will you help me write it?</p>
     </Layout>
   )
 }

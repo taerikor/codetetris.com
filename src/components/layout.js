@@ -25,6 +25,7 @@ export default function Layout({ children }) {
         padding-top: ${rhythm(1.5)};
       `}
     >
+      <div>
       <Link to={`/`}>
         <h3
           css={css`
@@ -36,6 +37,16 @@ export default function Layout({ children }) {
             {data.site.siteMetadata.title}
         </h3>
       </Link>
+        <div
+        css={css`
+        float: right;
+        `}
+        >
+      <Link to={`/tags`}>
+        TAG
+      </Link>
+        </div>
+      </div>
       {children}
       <div 
         css={css`
