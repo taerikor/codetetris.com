@@ -5,7 +5,7 @@ import { graphql } from 'gatsby'
 export default function About({ data }) {
   return (
     <Layout>
-      <h1>About {data.site.siteMetadata.title}</h1>
+      <h1>About {data.site.siteMetadata.author}</h1>
       <p>
           뚝딱뚝딱
       </p>
@@ -17,7 +17,7 @@ export const query = graphql`
   query {
     site {
       siteMetadata {
-        title
+        author
       }
     }
   }

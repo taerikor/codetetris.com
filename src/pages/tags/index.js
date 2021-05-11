@@ -1,36 +1,26 @@
 import { graphql, Link } from 'gatsby'
 import React from 'react'
 import Layout from '../../components/layout'
+import _ from 'lodash'
 
 export const query = graphql`
 query {
   allMarkdownRemark {
-    edges {
-      node {
-        id
-        frontmatter {
-          tags
-        }
-      }
+    group(field: frontmatter___tags) {
+      tag: fieldValue
+      totalCount
     }
   }
 }
 `
 
 export default function Tags({data}) {
-    let tagsArray = [];
-        data.allMarkdownRemark.edges.forEach(({node}) => {
-        if(node.frontmatter.tags.length > 1){
-            node.frontmatter.tags.forEach(tag => tagsArray.push(tag))
-        }else if( node.frontmatter.tags.length === 1 ){
-            tagsArray.push(node.frontmatter.tags[0])
-        }
-    })
+  const tagsArray = data.allMarkdownRemark.group
     return (
     <Layout>
         <h2>Tags</h2>
-        {tagsArray.map(tag => (
-            <div key={tag}><Link to={`/tag/${tag}`}>{tag}</Link></div>
+        {tagsArray.map(item => (
+            <div key={item.tag}><Link to={`/tag/${_.kebabCase(item.tag)}/`}>{`${item.tag} (${item.totalCount})`}</Link></div>
         ))}
     </Layout>
     )

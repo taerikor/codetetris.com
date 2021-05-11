@@ -1,7 +1,9 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import { css } from "@emotion/react"
+import _ from 'lodash'
 
 export default function BlogPost({ data }) {
   const post = data.markdownRemark
@@ -10,6 +12,18 @@ export default function BlogPost({ data }) {
       <Seo title={post.frontmatter.title} description={post.excerpt} />
       <div>
         <h1>{post.frontmatter.title}</h1>
+        <p
+                css={css`
+                  margin-top:10px;
+                  color: #bbb;
+                  font-size:15px;
+                `}
+              >
+              {post.frontmatter.date}
+              </p>
+              <ul>
+                {post.frontmatter.tags.map(tag => <li><Link to={`/tag/${_.kebabCase(tag)}/`}>{tag}</Link></li>)}
+              </ul>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
     </Layout>
@@ -22,6 +36,8 @@ export const query = graphql`
       html
       frontmatter {
         title
+        date(formatString: "MMMM DD, YYYY")
+        tags
       }
       excerpt
     }

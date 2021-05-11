@@ -4,6 +4,7 @@ import { css } from "@emotion/react"
 import { rhythm } from "../utils/typography"
 import Layout from "../components/layout"
 import Profile from '../components/profile'
+import _ from 'lodash'
 
 export default function Home({ data }) {
   console.log(data)
@@ -23,22 +24,26 @@ export default function Home({ data }) {
                 color: inherit;
               `}
             >
+            <div>
             <h3
               css={css`
                 margin-bottom: ${rhythm(1 / 4)};
               `}
             >
-              {node.frontmatter.title}{" "}
+              {node.frontmatter.title}
+              </h3>
+              <ul>
+                {node.frontmatter.tags.map(tag => <li><Link to={`/tag/${_.kebabCase(tag)}/`}>{tag}</Link></li>)}
+              </ul>
+            </div>
               <p
                 css={css`
-                  margin-top:10px;
                   color: #bbb;
                   font-size:15px;
                 `}
               >
               {node.frontmatter.date}
               </p>
-            </h3>
             <p>{node.frontmatter.description}</p>
             </Link>
           </div>
@@ -59,6 +64,7 @@ export const query = graphql`
           title
           date(formatString: "MMMM DD, YYYY")
           description
+          tags
         }
         fields {
           slug

@@ -2,7 +2,6 @@ import { Link } from 'gatsby'
 import React from 'react'
 
 export default function Profile({ author }) {
-    console.log()
     return (
         <div>
         <span>개발 공부 정리 노트</span>
