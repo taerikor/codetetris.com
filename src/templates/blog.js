@@ -14,7 +14,6 @@ export default function BlogPost({ data }) {
         <h1>{post.frontmatter.title}</h1>
         <p
                 css={css`
-                  margin-top:10px;
                   color: #bbb;
                   font-size:15px;
                 `}
@@ -25,6 +24,7 @@ export default function BlogPost({ data }) {
               css={
                 css`
                 display: flex;
+                margin-bottom: 30px;
                 `
               }
               >

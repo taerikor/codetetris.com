@@ -24,7 +24,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     {
       postsRemark: allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
-        limit: 2000
+        limit: 1000
       ) {
         edges {
           node {
@@ -37,7 +37,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           }
         }
       }
-      tagsGroup: allMarkdownRemark(limit: 2000) {
+      tagsGroup: allMarkdownRemark(limit: 1000) {
         group(field: frontmatter___tags) {
           fieldValue
         }
@@ -50,21 +50,16 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
   const posts = result.data.postsRemark.edges
-  // Create post detail pages
   posts.forEach(({ node }) => {
     createPage({
       path: node.fields.slug,
       component: blogPostTemplate,
       context: {
-        // Data passed to context is available
-        // in page queries as GraphQL variables.
         slug: node.fields.slug,
       },
     })
   })
-  // Extract tag data from query
   const tags = result.data.tagsGroup.group
-  // Make tag pages
   tags.forEach(tag => {
     createPage({
       path: `/tag/${_.kebabCase(tag.fieldValue)}/`,
