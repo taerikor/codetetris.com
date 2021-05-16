@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `CODE NAMU`,
     description: `개발 그것은...`,
-    author: `taeri`,
+    author: `Taeri Kim`,
   },
   plugins: [
     {

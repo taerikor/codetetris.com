@@ -1,52 +1,22 @@
 import React from "react"
-import { Link,graphql } from "gatsby"
-import { css } from "@emotion/react"
-import { rhythm } from "../utils/typography"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import Profile from '../components/profile'
-import _ from 'lodash'
+import Post from '../components/post'
 
 export default function Home({ data }) {
   console.log(data)
   return (
     <Layout>
       <div>
-        <Profile author={data.site.siteMetadata.author} />
         {data.allMarkdownRemark.edges.map(({ node }) => (
-          <div key={node.id}
-              css={css`
-              margin-top: 30px;
-            `}>
-                        <Link
-              to={node.fields.slug}
-              css={css`
-                text-decoration: none;
-                color: inherit;
-              `}
-            >
-            <div>
-            <h3
-              css={css`
-                margin-bottom: ${rhythm(1 / 4)};
-              `}
-            >
-              {node.frontmatter.title}
-              </h3>
-              <ul>
-                {node.frontmatter.tags.map(tag => <li><Link to={`/tag/${_.kebabCase(tag)}/`}>{tag}</Link></li>)}
-              </ul>
-            </div>
-              <p
-                css={css`
-                  color: #bbb;
-                  font-size:15px;
-                `}
-              >
-              {node.frontmatter.date}
-              </p>
-            <p>{node.frontmatter.description}</p>
-            </Link>
-          </div>
+          <Post 
+          key={node.id}
+          slug={node.fields.slug}
+          title={node.frontmatter.title}
+          date={node.frontmatter.date}
+          description={node.frontmatter.description}
+          tags={node.frontmatter.tags}
+          />
         ))}
       </div>
     </Layout>

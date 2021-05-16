@@ -1,9 +1,9 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { css } from "@emotion/react"
-import _ from 'lodash'
+import Tag from '../components/tag'
 
 export default function BlogPost({ data }) {
   const post = data.markdownRemark
@@ -21,9 +21,15 @@ export default function BlogPost({ data }) {
               >
               {post.frontmatter.date}
               </p>
-              <ul>
-                {post.frontmatter.tags.map(tag => <li><Link to={`/tag/${_.kebabCase(tag)}/`}>{tag}</Link></li>)}
-              </ul>
+              <div
+              css={
+                css`
+                display: flex;
+                `
+              }
+              >
+                {post.frontmatter.tags.map(tag => <Tag name={tag} />)}
+              </div>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
     </Layout>

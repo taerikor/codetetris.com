@@ -11,6 +11,7 @@ export default function Layout({ children }) {
             site {
               siteMetadata {
                 title
+                author
               }
             }
           }
@@ -21,25 +22,38 @@ export default function Layout({ children }) {
       css={css`
         margin: 0 auto;
         max-width: 700px;
-        padding: ${rhythm(2)};
+        padding: ${rhythm(1)};
         padding-top: ${rhythm(1.5)};
       `}
     >
-      <div>
+      <div
+      css={css`
+      margin-bottom: 50px
+      `}
+      >
+        <div
+        css={css`
+        display: inline-block;
+        `}
+        >
       <Link to={`/`}>
-        <h3
+        <h2
           css={css`
-            margin-bottom: ${rhythm(2)};
-            display: inline-block;
             font-style: normal;
+            margin:0;
           `}
         >
             {data.site.siteMetadata.title}
-        </h3>
+        </h2>
       </Link>
+      <span >by <Link to='/about'>{data.site.siteMetadata.author}</Link> </span>
+        </div>
         <div
         css={css`
         float: right;
+        height: 56px;
+        display:flex;
+        align-items: center;
         `}
         >
       <Link to={`/tags`}>
@@ -50,9 +64,12 @@ export default function Layout({ children }) {
       {children}
       <div 
         css={css`
-        position: absolute;
+        position: relative;
         bottom: 0;
-        padding-bottom: 20px;
+        padding-top: 40px;
+        font-size: 13px;
+        width: 100%;
+        text-align: center;
         `}
       >
       ©{data.site.siteMetadata.title} All rights reserved
