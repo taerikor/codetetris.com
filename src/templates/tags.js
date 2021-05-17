@@ -4,7 +4,7 @@ import { css } from "@emotion/react"
 import { rhythm } from "../utils/typography"
 // Components
 import { Link, graphql } from "gatsby"
-import Layout from '../components/layout'
+import Layout from "../components/layout"
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
@@ -15,40 +15,42 @@ const Tags = ({ pageContext, data }) => {
     <Layout>
       <h1>{tagHeader}</h1>
       <h5>{`${totalCount}개의 게시물`}</h5>
-        {edges.map(({ node }) => {
-          return (
-            <div key={node.id}
-              css={css`
+      {edges.map(({ node }) => {
+        return (
+          <div
+            key={node.id}
+            css={css`
               margin-top: 30px;
-            `}>
-                        <Link
+            `}
+          >
+            <Link
               to={node.fields.slug}
               css={css`
                 text-decoration: none;
                 color: inherit;
               `}
             >
-            <h3
-              css={css`
-                margin-bottom: ${rhythm(1 / 4)};
-              `}
-            >
-              {node.frontmatter.title}{" "}
-              <p
+              <h3
                 css={css`
-                  margin-top:10px;
-                  color: #bbb;
-                  font-size:15px;
+                  margin-bottom: ${rhythm(1 / 4)};
                 `}
               >
-              {node.frontmatter.date}
-              </p>
-            </h3>
-            <p>{node.frontmatter.description}</p>
+                {node.frontmatter.title}{" "}
+                <p
+                  css={css`
+                    margin-top: 10px;
+                    color: #bbb;
+                    font-size: 15px;
+                  `}
+                >
+                  {node.frontmatter.date}
+                </p>
+              </h3>
+              <p>{node.frontmatter.description}</p>
             </Link>
           </div>
-          )
-        })}
+        )
+      })}
     </Layout>
   )
 }
@@ -95,8 +97,8 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
-           date(formatString: "MMMM DD, YYYY")
-           description
+            date(formatString: "MMMM DD, YYYY")
+            description
           }
         }
       }
