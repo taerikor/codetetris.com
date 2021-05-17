@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `CODE NAMU`,
+    title: `CODE TETRIS`,
     description: `개발 그것은...`,
     author: `Taeri Kim`,
   },
@@ -8,8 +8,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `CODE NAMU`,
-        short_name: `CODE NAMU`,
+        name: `CODE TETRIS`,
+        short_name: `CODE TETRIS`,
         start_url: `/`,
         background_color: `#6b37bf`,
         theme_color: `#6b37bf`,
@@ -29,11 +29,23 @@ module.exports = {
     `gatsby-transformer-remark`,
     `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,
       },
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Orbitron`
+        ],
+        display: 'swap'
+      }
     },
   ],
 }

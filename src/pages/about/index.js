@@ -1,60 +1,39 @@
 import React from "react"
 import Layout from "../../components/layout"
 import { graphql, Link } from "gatsby"
-import { css } from "@emotion/react"
+
+import "./index.css"
+
+import { StaticImage } from "gatsby-plugin-image"
+
+
+const profilePath = '../../images/profile.jpeg'
 
 export default function About({ data }) {
   return (
     <Layout>
-      <div
-        css={css`
-          display: flex;
-          justify-content: center;
-          margin-bottom: 50px;
-        `}
-      >
-        <span
-          css={css`
-            font-size: 70px;
-          `}
-        >
-          "Main Topic"
+      <div className="topic_container">
+        <span className="topic">
+          "이 아이가 배부르다는 감정을 알까요?"
         </span>
       </div>
-      <div
-        css={css`
-          display: flex;
-          justify-content: space-between;
-        `}
-      >
-        <div
-          css={css`
-            height: 300px;
-            width: 300px;
-            background-color: black;
-            color: white;
-          `}
-        >
-          Pic
-        </div>
-        <div
-          css={css`
-            height: 300px;
-            width: 300px;
-            padding-left: 20px;
-          `}
-        >
-          <h3>Taeri Kim</h3>
-          <span>주절주절...</span>
+      <div className="bio_container">
+        <StaticImage 
+        src={profilePath} 
+        alt='taeri'
+        width={300}
+        height={300}
+        />
+        <div className='meta_container'>
+          <h3 className='meta_name'>Taeri Kim</h3>
+          <span className='meta_info'>
+            {`저는 항상 새로운 것을 섭취하길 갈망합니다.
+            어려움을 즐기고...
+            `}
+            </span>
         </div>
       </div>
-      <div
-        css={css`
-          display: flex;
-          justify-content: space-between;
-          margin-top: 30px;
-        `}
-      >
+      <div className='link_container'>
         <Link to="#">Contact</Link>
         <Link to="https://github.com/taerikor">Git Hub</Link>
         <Link to="#">Resume</Link>

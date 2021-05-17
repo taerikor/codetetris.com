@@ -1,0 +1,36 @@
+.topic_container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.topic {
+  font-size: 40px;
+  color: #6666;
+  text-align: center;
+}
+
+.bio_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pic_container {
+  height: 300px;
+  width: 300px;
+}
+
+.meta_container {
+  height: 300px;
+  width: 300px;
+  padding-left: 20px;
+}
+
+.link_container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.meta_info {
+  padding: 10px;
+}

@@ -4,6 +4,8 @@ import { useStaticQuery, Link, graphql } from "gatsby"
 
 import { rhythm } from "../../utils/typography"
 
+import "./index.css"
+
 export default function Layout({ children }) {
   const data = useStaticQuery(
     graphql`
@@ -37,9 +39,8 @@ export default function Layout({ children }) {
           `}
         >
           <Link to={`/`}>
-            <h2
+            <h2 className='metatitle'
               css={css`
-                font-style: normal;
                 margin: 0;
               `}
             >
