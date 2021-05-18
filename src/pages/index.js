@@ -2,11 +2,12 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Post from "../components/post"
+import Seo from "../components/seo"
 
 export default function Home({ data }) {
-  console.log(data);;;;;;
   return (
     <Layout>
+      <Seo title={`Home`} />
       <div>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <Post
@@ -39,7 +40,6 @@ export const query = graphql`
           fields {
             slug
           }
-          excerpt
         }
       }
     }

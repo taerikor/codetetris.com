@@ -11,11 +11,19 @@ export default function BlogPost({ data }) {
     <Layout>
       <Seo title={post.frontmatter.title} description={post.excerpt} />
       <div>
-        <h1>{post.frontmatter.title}</h1>
+        <h1
+          style={{
+            marginBottom: "10px",
+            color: "black",
+          }}
+        >
+          {post.frontmatter.title}
+        </h1>
         <p
           css={css`
             color: #bbb;
             font-size: 15px;
+            margin-bottom: 10px;
           `}
         >
           {post.frontmatter.date}
@@ -23,7 +31,7 @@ export default function BlogPost({ data }) {
         <div
           css={css`
             display: flex;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
           `}
         >
           {post.frontmatter.tags.map(tag => (

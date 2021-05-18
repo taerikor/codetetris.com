@@ -16,3 +16,7 @@
 .tag_container:active {
   transform: scale(0.96);
 }
+
+.tag_container a {
+  all: unset;
+}

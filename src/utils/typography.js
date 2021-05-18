@@ -1,7 +1,7 @@
 import Typography from "typography"
-import kirkhamTheme from "typography-theme-kirkham"
+import parnassusTheme from "typography-theme-parnassus"
 
-const typography = new Typography(kirkhamTheme)
+const typography = new Typography(parnassusTheme)
 
 export default typography
 export const rhythm = typography.rhythm

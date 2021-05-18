@@ -39,16 +39,25 @@ export default function Layout({ children }) {
           `}
         >
           <Link to={`/`}>
-            <h2 className='metatitle'
+            <h1
+              className="metatitle"
               css={css`
                 margin: 0;
               `}
             >
               {data.site.siteMetadata.title}
-            </h2>
+            </h1>
           </Link>
           <span>
-            by <Link to="/about">{data.site.siteMetadata.author}</Link>{" "}
+            by{" "}
+            <Link
+              style={{
+                color: "#ff7961",
+              }}
+              to="/about"
+            >
+              {data.site.siteMetadata.author}
+            </Link>{" "}
           </span>
         </div>
         <div
@@ -59,7 +68,22 @@ export default function Layout({ children }) {
             align-items: center;
           `}
         >
-          <Link to={`/tags`}>TAG</Link>
+          <Link
+            style={{
+              all: "unset",
+              cursor: "pointer",
+            }}
+            to={`/tags`}
+          >
+            <h4
+              style={{
+                fontSize: "20px",
+                margin: 0,
+              }}
+            >
+              TAG
+            </h4>
+          </Link>
         </div>
       </div>
       {children}
@@ -67,10 +91,11 @@ export default function Layout({ children }) {
         css={css`
           position: relative;
           bottom: 0;
-          padding-top: 40px;
+          padding-top: 100px;
           font-size: 13px;
           width: 100%;
           text-align: center;
+          color: #6666;
         `}
       >
         ©{data.site.siteMetadata.title} All rights reserved

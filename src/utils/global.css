@@ -3,8 +3,16 @@ a {
   text-decoration: none;
 }
 
-h1,
+h1 {
+  color: #ba000d;
+}
+
 h2,
 h3 {
-  color: #7c1ea3;
+  color: #f44336;
+  margin-bottom: 10px;
+}
+
+p {
+  margin: 0;
 }

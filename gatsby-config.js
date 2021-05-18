@@ -38,14 +38,5 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [
-          `Orbitron`
-        ],
-        display: 'swap'
-      }
-    },
   ],
 }

@@ -11,26 +11,24 @@
 
 .bio_container {
   display: flex;
-  justify-content: space-between;
-}
-
-.pic_container {
-  height: 300px;
-  width: 300px;
+  flex-direction: column;
 }
 
 .meta_container {
-  height: 300px;
-  width: 300px;
   padding-left: 20px;
 }
 
 .link_container {
   display: flex;
-  justify-content: space-between;
-  margin-top: 30px;
+  justify-content: space-around;
+  margin-top: 50px;
+  font-size: 18px;
 }
 
 .meta_info {
   padding: 10px;
+}
+
+.meta_name {
+  text-align: center;
 }

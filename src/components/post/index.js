@@ -6,45 +6,36 @@ import { rhythm } from "../../utils/typography"
 
 const Post = ({ slug, title, date, description, tags }) => {
   return (
-    <div
-      css={css`
-        margin-top: 30px;
-      `}
-    >
-      <Link
-        to={slug}
-        css={css`
-          text-decoration: none;
-          color: inherit;
-        `}
-      >
+    <div>
+      <Link to={slug}>
         <h3
           css={css`
-            margin-bottom: ${rhythm(1 / 4)};
+            margin-bottom: ${rhythm(1 / 8)};
+            font-size: 30px;
           `}
         >
           {title}
         </h3>
-        <p
-          css={css`
-            color: #bbb;
-            font-size: 15px;
-            margin-bottom: 10px;
-          `}
-        >
-          {date}
-        </p>
-        <div
-          css={css`
-            margin-bottom: 10px;
-          `}
-        >
-          {tags.map(tag => (
-            <Tag name={tag} />
-          ))}
-        </div>
-        <span>{description}</span>
       </Link>
+      <p
+        css={css`
+          color: #bbb;
+          font-size: 15px;
+          margin-bottom: 5px;
+        `}
+      >
+        {date}
+      </p>
+      <div
+        css={css`
+          margin-bottom: 10px;
+        `}
+      >
+        {tags.map(tag => (
+          <Tag name={tag} />
+        ))}
+      </div>
+      <span>{description}</span>
     </div>
   )
 }

@@ -1,10 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { css } from "@emotion/react"
-import { rhythm } from "../utils/typography"
-// Components
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import Post from "../components/post"
+import Seo from "../components/seo"
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
@@ -13,42 +12,27 @@ const Tags = ({ pageContext, data }) => {
 
   return (
     <Layout>
-      <h1>{tagHeader}</h1>
-      <h5>{`${totalCount}개의 게시물`}</h5>
+      <Seo title={tag} />
+      <h1
+        style={{
+          display: "inline",
+          marginRight: "10px",
+          color: "black",
+        }}
+      >
+        {tagHeader}
+      </h1>
+      <span>{`${totalCount}개의 게시물`}</span>
       {edges.map(({ node }) => {
         return (
-          <div
+          <Post
             key={node.id}
-            css={css`
-              margin-top: 30px;
-            `}
-          >
-            <Link
-              to={node.fields.slug}
-              css={css`
-                text-decoration: none;
-                color: inherit;
-              `}
-            >
-              <h3
-                css={css`
-                  margin-bottom: ${rhythm(1 / 4)};
-                `}
-              >
-                {node.frontmatter.title}{" "}
-                <p
-                  css={css`
-                    margin-top: 10px;
-                    color: #bbb;
-                    font-size: 15px;
-                  `}
-                >
-                  {node.frontmatter.date}
-                </p>
-              </h3>
-              <p>{node.frontmatter.description}</p>
-            </Link>
-          </div>
+            slug={node.fields.slug}
+            title={node.frontmatter.title}
+            date={node.frontmatter.date}
+            description={node.frontmatter.description}
+            tags={node.frontmatter.tags}
+          />
         )
       })}
     </Layout>
@@ -69,6 +53,7 @@ Tags.propTypes = {
               title: PropTypes.string.isRequired,
               data: PropTypes.string.isRequired,
               description: PropTypes.string.isRequired,
+              tags: PropTypes.string.isRequired,
             }),
             fields: PropTypes.shape({
               slug: PropTypes.string.isRequired,
@@ -95,10 +80,12 @@ export const pageQuery = graphql`
           fields {
             slug
           }
+          id
           frontmatter {
             title
             date(formatString: "MMMM DD, YYYY")
             description
+            tags
           }
         }
       }
