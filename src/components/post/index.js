@@ -1,5 +1,4 @@
 import React from "react"
-import { css } from "@emotion/react"
 import { Link } from "gatsby"
 import Tag from "../tag"
 import { rhythm } from "../../utils/typography"
@@ -9,28 +8,28 @@ const Post = ({ slug, title, date, description, tags }) => {
     <div>
       <Link to={slug}>
         <h3
-          css={css`
-            margin-bottom: ${rhythm(1 / 8)};
-            font-size: 30px;
-            color: #0366d6;
-          `}
+          style={{
+            marginBottom: `${rhythm(1 / 8)}`,
+            fontSize: `30px`,
+            color: `#0366d6`,
+          }}
         >
           {title}
         </h3>
       </Link>
       <p
-        css={css`
-          color: #bbb;
-          font-size: 13px;
-          margin-bottom: 5px;
-        `}
+        style={{
+          color: `#bbb`,
+          fontSize: `13px`,
+          marginBottom: `5px`,
+        }}
       >
         {date}
       </p>
       <div
-        css={css`
-          margin-bottom: 10px;
-        `}
+        style={{
+          marginBottom: `10px`,
+        }}
       >
         {tags.map(tag => (
           <Tag name={tag} />

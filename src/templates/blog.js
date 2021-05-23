@@ -2,7 +2,6 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import { css } from "@emotion/react"
 import Tag from "../components/tag"
 
 export default function BlogPost({ data }) {
@@ -20,19 +19,19 @@ export default function BlogPost({ data }) {
           {post.frontmatter.title}
         </h1>
         <p
-          css={css`
-            color: #bbb;
-            font-size: 15px;
-            margin-bottom: 10px;
-          `}
+          style={{
+            color: `#bbb`,
+            fontSize: `15px`,
+            marginBottom: `10px`,
+          }}
         >
           {post.frontmatter.date}
         </p>
         <div
-          css={css`
-            display: flex;
-            margin-bottom: 20px;
-          `}
+          style={{
+            display: `flex`,
+            marginBottom: `20px`,
+          }}
         >
           {post.frontmatter.tags.map(tag => (
             <Tag name={tag} />

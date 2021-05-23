@@ -1,10 +1,7 @@
 import React from "react"
-import { css } from "@emotion/react"
 import { useStaticQuery, Link, graphql } from "gatsby"
 
 import { rhythm } from "../../utils/typography"
-
-import "./index.css"
 
 export default function Layout({ children }) {
   const data = useStaticQuery(
@@ -21,30 +18,29 @@ export default function Layout({ children }) {
   )
   return (
     <div
-      css={css`
-        margin: 0 auto;
-        max-width: 700px;
-        padding: ${rhythm(1)};
-        padding-top: ${rhythm(1.5)};
-      `}
+      style={{
+        margin: "0 auto",
+        maxWidth: "700px",
+        padding: `${rhythm(1)}`,
+        paddingTop: `${rhythm(1.5)}`,
+      }}
     >
       <div
-        css={css`
-          margin-bottom: 50px;
-        `}
+        style={{
+          marginBottom: `50px`,
+        }}
       >
         <div
-          css={css`
-            display: inline-block;
-          `}
+          style={{
+            display: 'inline-block',
+          }}
         >
           <Link to={`/`}>
             <h1
-              className="metatitle"
-              css={css`
-                margin: 0;
-                font-size: 40px;
-              `}
+              style={{
+                margin: 0,
+                fontSize: `40px`,
+              }}
             >
               {data.site.siteMetadata.title}
             </h1>
@@ -62,12 +58,12 @@ export default function Layout({ children }) {
           </span>
         </div>
         <div
-          css={css`
-            float: right;
-            height: 56px;
-            display: flex;
-            align-items: center;
-          `}
+          style={{
+            float: `right`,
+            height: `56px`,
+            display: `flex`,
+            alignItems: `center`,
+          }}
         >
           <Link
             style={{
@@ -76,28 +72,28 @@ export default function Layout({ children }) {
             }}
             to={`/tags`}
           >
-            <h4
+            <span
               style={{
                 fontSize: "20px",
                 margin: 0,
               }}
             >
               TAG
-            </h4>
+            </span>
           </Link>
         </div>
       </div>
       {children}
       <div
-        css={css`
-          position: relative;
-          bottom: 0;
-          padding-top: 100px;
-          font-size: 13px;
-          width: 100%;
-          text-align: center;
-          color: #6666;
-        `}
+        style={{
+          position: `relative`,
+          bottom: 0,
+          paddingTop: `100px`,
+          fontSize: `13px`,
+          width: `100%`,
+          textAlign: `center`,
+          color: `#6666`,
+        }}
       >
         ©{data.site.siteMetadata.title} All rights reserved
       </div>
