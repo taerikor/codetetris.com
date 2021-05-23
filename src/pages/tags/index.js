@@ -3,6 +3,7 @@ import React from "react"
 import Layout from "../../components/layout"
 import _ from "lodash"
 import SEO from "../../components/seo"
+import { rhythm } from '../../utils/typography'
 
 export const query = graphql`
   query {
@@ -22,7 +23,7 @@ export default function Tags({ data }) {
       <SEO title={`Tags`} />
       <h2
         style={{
-          marginBottom: "15px",
+          marginBottom: rhythm(1.5),
         }}
       >
         Tags
@@ -31,7 +32,7 @@ export default function Tags({ data }) {
         <div
           key={item.tag}
           style={{
-            marginBottom: "5px",
+            marginBottom: rhythm(0.2),
           }}
         >
           <Link

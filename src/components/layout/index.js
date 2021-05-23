@@ -1,7 +1,8 @@
 import React from "react"
 import { useStaticQuery, Link, graphql } from "gatsby"
 
-import { rhythm } from "../../utils/typography"
+import { rhythm,scale } from "../../utils/typography"
+
 
 export default function Layout({ children }) {
   const data = useStaticQuery(
@@ -20,14 +21,14 @@ export default function Layout({ children }) {
     <div
       style={{
         margin: "0 auto",
-        maxWidth: "700px",
-        padding: `${rhythm(1)}`,
-        paddingTop: `${rhythm(1.5)}`,
+        maxWidth: '700px',
+        padding: rhythm(1),
+        paddingTop: rhythm(1.5),
       }}
     >
       <div
         style={{
-          marginBottom: `50px`,
+          marginBottom: rhythm(2),
         }}
       >
         <div
@@ -39,7 +40,10 @@ export default function Layout({ children }) {
             <h1
               style={{
                 margin: 0,
-                fontSize: `40px`,
+                fontSize: '35px',
+                letterSpacing:` -4px`,
+                wordSpacing:`10px`,
+                color: '#263959',
               }}
             >
               {data.site.siteMetadata.title}
@@ -60,26 +64,20 @@ export default function Layout({ children }) {
         <div
           style={{
             float: `right`,
-            height: `56px`,
-            display: `flex`,
-            alignItems: `center`,
           }}
         >
           <Link
-            style={{
-              all: "unset",
-              cursor: "pointer",
-            }}
             to={`/tags`}
           >
-            <span
+            <h3
               style={{
-                fontSize: "20px",
+                fontSize: scale(2),
                 margin: 0,
+                letterSpacing: '-1px'
               }}
             >
               TAG
-            </span>
+            </h3>
           </Link>
         </div>
       </div>
@@ -88,8 +86,8 @@ export default function Layout({ children }) {
         style={{
           position: `relative`,
           bottom: 0,
-          paddingTop: `100px`,
-          fontSize: `13px`,
+          paddingTop: rhythm(5),
+          fontSize: scale(0),
           width: `100%`,
           textAlign: `center`,
           color: `#6666`,

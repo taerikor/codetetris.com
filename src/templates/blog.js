@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Tag from "../components/tag"
+import { rhythm } from '../utils/typography'
 
 export default function BlogPost({ data }) {
   const post = data.markdownRemark
@@ -12,7 +13,7 @@ export default function BlogPost({ data }) {
       <div>
         <h1
           style={{
-            marginBottom: "10px",
+            marginBottom: rhythm(0.5),
             color: "black",
           }}
         >
@@ -22,7 +23,7 @@ export default function BlogPost({ data }) {
           style={{
             color: `#bbb`,
             fontSize: `15px`,
-            marginBottom: `10px`,
+            marginBottom: rhythm(0.5),
           }}
         >
           {post.frontmatter.date}
@@ -30,7 +31,7 @@ export default function BlogPost({ data }) {
         <div
           style={{
             display: `flex`,
-            marginBottom: `20px`,
+            marginBottom: rhythm(1),
           }}
         >
           {post.frontmatter.tags.map(tag => (

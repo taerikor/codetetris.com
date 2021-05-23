@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Post from "../components/post"
 import Seo from "../components/seo"
+import { rhythm } from '../utils/typography'
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
@@ -13,16 +14,22 @@ const Tags = ({ pageContext, data }) => {
   return (
     <Layout>
       <Seo title={tag} />
+      <div
+      style={{
+        marginBottom: rhythm(2)
+      }}
+      >
       <h1
         style={{
           display: "inline",
-          marginRight: "10px",
+          marginRight: rhythm(0.5),
           color: "black",
         }}
       >
         {tagHeader}
       </h1>
       <span>{`${totalCount}개의 게시물`}</span>
+      </div>
       {edges.map(({ node }) => {
         return (
           <Post

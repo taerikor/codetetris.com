@@ -5,13 +5,18 @@ import { rhythm } from "../../utils/typography"
 
 const Post = ({ slug, title, date, description, tags }) => {
   return (
-    <div>
+    <div
+    style={{
+      marginBottom:rhythm(2)
+    }}
+    >
       <Link to={slug}>
         <h3
           style={{
-            marginBottom: `${rhythm(1 / 8)}`,
+            marginBottom: rhythm(1 / 8),
             fontSize: `30px`,
-            color: `#0366d6`,
+            color: `#2797ff
+            `,
           }}
         >
           {title}
@@ -21,14 +26,14 @@ const Post = ({ slug, title, date, description, tags }) => {
         style={{
           color: `#bbb`,
           fontSize: `13px`,
-          marginBottom: `5px`,
+          marginBottom: rhythm(1 / 4),
         }}
       >
         {date}
       </p>
       <div
         style={{
-          marginBottom: `10px`,
+          marginBottom: rhythm(1 / 4),
         }}
       >
         {tags.map(tag => (

@@ -11,6 +11,7 @@
   text-transform: uppercase;
   font-weight: 800;
   font-size: 12px;
+  margin-right: 5px;
 }
 
 .tag_container:active {

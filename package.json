@@ -29,7 +29,9 @@
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "react-typography": "^0.16.19",
-    "typography": "^0.16.19",
+    "typography": "^0.16.21",
+    "typography-theme-grand-view": "^0.16.19",
+    "typography-theme-irving": "^0.16.19",
     "typography-theme-parnassus": "^0.16.19"
   },
   "devDependencies": {

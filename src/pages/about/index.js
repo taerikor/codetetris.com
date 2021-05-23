@@ -6,6 +6,7 @@ import "./index.css"
 
 import { StaticImage } from "gatsby-plugin-image"
 import SEO from "../../components/seo"
+import { rhythm } from '../../utils/typography'
 
 const profilePath = "../../images/profile.jpeg"
 
@@ -13,7 +14,11 @@ export default function About() {
   return (
     <Layout>
       <SEO title={`About`} />
-      <div className="topic_container">
+      <div className="topic_container"
+      style={{
+        marginBottom:rhythm(1)
+      }}
+      >
         <span className="topic">"이 아이가 배부르다는 감정을 알까요?"</span>
       </div>
       <div className="bio_container">
@@ -30,7 +35,11 @@ export default function About() {
           </span>
         </div>
       </div>
-      <div className="link_container">
+      <div className="link_container"
+      style={{
+        marginTop:rhythm(2),
+      }}
+      >
         <a href="mailto:akdud153@gmail.com">Contact</a>
         <Link to="https://github.com/taerikor">Git Hub</Link>
         <Link to="#">Resume</Link>

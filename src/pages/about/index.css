@@ -1,7 +1,6 @@
 .topic_container {
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
 }
 .topic {
   font-size: 40px;
@@ -15,14 +14,9 @@
   flex-direction: column;
 }
 
-.meta_container {
-  padding-left: 20px;
-}
-
 .link_container {
   display: flex;
   justify-content: space-around;
-  margin-top: 50px;
   font-size: 18px;
 }
 
