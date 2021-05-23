@@ -43,6 +43,7 @@ export default function Layout({ children }) {
               className="metatitle"
               css={css`
                 margin: 0;
+                font-size: 40px;
               `}
             >
               {data.site.siteMetadata.title}
@@ -52,7 +53,7 @@ export default function Layout({ children }) {
             by{" "}
             <Link
               style={{
-                color: "#ff7961",
+                color: "#253ab4e1",
               }}
               to="/about"
             >

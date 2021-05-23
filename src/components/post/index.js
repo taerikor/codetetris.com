@@ -12,6 +12,7 @@ const Post = ({ slug, title, date, description, tags }) => {
           css={css`
             margin-bottom: ${rhythm(1 / 8)};
             font-size: 30px;
+            color: #0366d6;
           `}
         >
           {title}
@@ -20,7 +21,7 @@ const Post = ({ slug, title, date, description, tags }) => {
       <p
         css={css`
           color: #bbb;
-          font-size: 15px;
+          font-size: 13px;
           margin-bottom: 5px;
         `}
       >

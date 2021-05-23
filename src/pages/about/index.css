@@ -1,12 +1,13 @@
 .topic_container {
   display: flex;
   justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 .topic {
   font-size: 40px;
   color: #6666;
   text-align: center;
+  line-height: 40px;
 }
 
 .bio_container {
@@ -31,4 +32,5 @@
 
 .meta_name {
   text-align: center;
+  margin: 30px;
 }

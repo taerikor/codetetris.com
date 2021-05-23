@@ -20,7 +20,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const blogPostTemplate = path.resolve("src/templates/blog.js")
   const tagTemplate = path.resolve("src/templates/tags.js")
   const result = await graphql(`
-    {
+  {
       postsRemark: allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
         limit: 1000
@@ -43,7 +43,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       }
     }
   `)
-
+  
   if (result.errors) {
     reporter.panicOnBuild(`Error while running GraphQL query.`)
     return
