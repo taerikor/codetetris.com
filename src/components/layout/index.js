@@ -53,7 +53,7 @@ export default function Layout({ children }) {
             by{" "}
             <Link
               style={{
-                color: "#253ab4e1",
+                color: "#006acb",
               }}
               to="/about"
             >
