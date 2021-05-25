@@ -14,10 +14,14 @@
   margin-right: 5px;
 }
 
+.tag_container:hover {
+  color: black;
+}
+
 .tag_container:active {
   transform: scale(0.96);
 }
 
-.tag_container a {
+.tag_link {
   all: unset;
 }

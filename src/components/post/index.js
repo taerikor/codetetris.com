@@ -3,6 +3,8 @@ import { Link } from "gatsby"
 import Tag from "../tag"
 import { rhythm } from "../../utils/typography"
 
+import './index.css'
+
 const Post = ({ slug, title, date, description, tags }) => {
   return (
     <div
@@ -12,11 +14,9 @@ const Post = ({ slug, title, date, description, tags }) => {
     >
       <Link to={slug}>
         <h3
+          className='title'
           style={{
             marginBottom: rhythm(1 / 8),
-            fontSize: `30px`,
-            color: `#2797ff
-            `,
           }}
         >
           {title}

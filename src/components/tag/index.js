@@ -6,9 +6,13 @@ import "./index.css"
 
 const Tag = ({ name }) => {
   return (
-    <div className="tag_container">
-      <Link to={`/tag/${_.kebabCase(name)}/`}>{name}</Link>
-    </div>
+      <Link
+      className="tag_link"
+      to={`/tag/${_.kebabCase(name)}/`}>
+         <div className="tag_container">
+        {name}
+         </div>
+      </Link>
   )
 }
 

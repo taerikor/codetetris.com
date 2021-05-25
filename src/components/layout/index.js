@@ -50,17 +50,22 @@ export default function Layout({ children }) {
               {data.site.siteMetadata.title}
             </h1>
           </Link>
-          <span>
-            by{" "}
+          <h4
+          style={{
+            marginTop: "5px"
+          }}
+          >
+            by {" "}
             <Link
               style={{
                 color: "#006acb",
+                letterSpacing:` -1px`,
               }}
               to="/about"
             >
               {data.site.siteMetadata.author}
-            </Link>{" "}
-          </span>
+            </Link>
+          </h4>
         </div>
         <div
           style={{
@@ -72,8 +77,9 @@ export default function Layout({ children }) {
           >
             <h3
               style={{
-                fontSize: scale(2),
-                margin: 0,
+                fontSize: '25px',
+                bottom:0,
+                marginTop: '1px',
                 letterSpacing: '-1px'
               }}
             >

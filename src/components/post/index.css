@@ -1,0 +1,8 @@
+.title {
+  font-size: 30px;
+  color: #2797ff;
+}
+
+.title:hover {
+  color: #73c7ff;
+}
