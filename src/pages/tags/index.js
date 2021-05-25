@@ -1,9 +1,10 @@
-import { graphql, Link } from "gatsby"
 import React from "react"
-import Layout from "../../components/layout"
-import _ from "lodash"
-import SEO from "../../components/seo"
+import { graphql, Link } from "gatsby"
+import { kebabCase } from "lodash"
 import { rhythm } from '../../utils/typography'
+
+import Layout from "../../components/layout"
+import SEO from "../../components/seo"
 
 export const query = graphql`
   query {
@@ -36,7 +37,7 @@ export default function Tags({ data }) {
           }}
         >
           <Link
-            to={`/tag/${_.kebabCase(item.tag)}/`}
+            to={`/tag/${kebabCase(item.tag)}/`}
           >{`${item.tag} (${item.totalCount})`}</Link>
         </div>
       ))}

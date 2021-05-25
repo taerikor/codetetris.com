@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, Link, graphql } from "gatsby"
 
-import { rhythm,scale } from "../../utils/typography"
+import { rhythm } from "../../utils/typography"
 import { Footer } from '../footer'
 
 
@@ -77,7 +77,7 @@ export default function Layout({ children }) {
           >
             <h3
               style={{
-                fontSize: '25px',
+                fontSize: '20px',
                 bottom:0,
                 marginTop: '1px',
                 letterSpacing: '-1px'

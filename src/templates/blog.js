@@ -1,9 +1,10 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { rhythm } from '../utils/typography'
+
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Tag from "../components/tag"
-import { rhythm } from '../utils/typography'
 import Utterances from '../components/utterances'
 
 export default function BlogPost({ data }) {
