@@ -2,6 +2,7 @@ import React from "react"
 import { useStaticQuery, Link, graphql } from "gatsby"
 
 import { rhythm,scale } from "../../utils/typography"
+import { Footer } from '../footer'
 
 
 export default function Layout({ children }) {
@@ -82,19 +83,7 @@ export default function Layout({ children }) {
         </div>
       </div>
       {children}
-      <div
-        style={{
-          position: `relative`,
-          bottom: 0,
-          paddingTop: rhythm(5),
-          fontSize: scale(0),
-          width: `100%`,
-          textAlign: `center`,
-          color: `#6666`,
-        }}
-      >
-        ©{data.site.siteMetadata.title} All rights reserved
-      </div>
+      <Footer title={data.site.siteMetadata.title} />
     </div>
   )
 }

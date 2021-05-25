@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Tag from "../components/tag"
 import { rhythm } from '../utils/typography'
+import Utterances from '../components/utterances'
 
 export default function BlogPost({ data }) {
   const post = data.markdownRemark
@@ -39,6 +40,8 @@ export default function BlogPost({ data }) {
           ))}
         </div>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <h3>Comments</h3>
+        <Utterances repo="taerikor/blog-comments" theme="github-light" />
       </div>
     </Layout>
   )

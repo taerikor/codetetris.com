@@ -1,0 +1,8 @@
+.footer_container {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: #6666;
+  font-size: 13px;
+}
