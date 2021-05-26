@@ -18,6 +18,7 @@
   display: flex;
   justify-content: space-around;
   font-size: 18px;
+  font-family: "Merriweather Sans", sans-serif;
 }
 
 .meta_info {

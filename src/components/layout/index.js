@@ -4,6 +4,8 @@ import { useStaticQuery, Link, graphql } from "gatsby"
 import { rhythm } from "../../utils/typography"
 import { Footer } from '../footer'
 
+import './index.css'
+
 
 export default function Layout({ children }) {
   const data = useStaticQuery(
@@ -50,9 +52,10 @@ export default function Layout({ children }) {
               {data.site.siteMetadata.title}
             </h1>
           </Link>
-          <h4
+          <span
+          className='author_header'
           style={{
-            marginTop: "5px"
+            marginTop: "5px",
           }}
           >
             by {" "}
@@ -65,7 +68,7 @@ export default function Layout({ children }) {
             >
               {data.site.siteMetadata.author}
             </Link>
-          </h4>
+          </span>
         </div>
         <div
           style={{
@@ -74,17 +77,11 @@ export default function Layout({ children }) {
         >
           <Link
             to={`/tags`}
+            className='tag_header'
           >
-            <h3
-              style={{
-                fontSize: '20px',
-                bottom:0,
-                marginTop: '1px',
-                letterSpacing: '-1px'
-              }}
-            >
+            <span>
               TAG
-            </h3>
+            </span>
           </Link>
         </div>
       </div>

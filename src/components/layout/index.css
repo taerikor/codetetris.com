@@ -1,0 +1,19 @@
+.author_header,
+.tag_header span {
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+.tag_header {
+  box-shadow: none;
+}
+
+.tag_header span {
+  font-size: 20px;
+  bottom: 0;
+  margin-right: 10px;
+  letter-spacing: -1px;
+}
+
+.tag_header span:hover {
+  opacity: 0.7;
+}
