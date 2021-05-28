@@ -4,6 +4,7 @@ import Tag from "../tag"
 import { rhythm } from "../../utils/typography"
 
 import './index.css'
+import  PropTypes  from 'prop-types'
 
 const Post = ({ slug, title, date, description, tags }) => {
   return (
@@ -13,18 +14,18 @@ const Post = ({ slug, title, date, description, tags }) => {
     }}
     >
       <Link to={slug}>
-        <h3
+        <h2
           className='title'
           style={{
             marginBottom: rhythm(1 / 8),
           }}
         >
           {title}
-        </h3>
+        </h2>
       </Link>
       <p
         style={{
-          color: `#bbb`,
+          color: `#666`,
           fontSize: `13px`,
           marginBottom: rhythm(1 / 4),
         }}
@@ -43,6 +44,15 @@ const Post = ({ slug, title, date, description, tags }) => {
       <span>{description}</span>
     </div>
   )
+}
+
+Post.propTypes = {
+  slug: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  date: PropTypes.number.isRequired, 
+  description: PropTypes.string.isRequired,
+  tags: PropTypes.array,
+
 }
 
 export default Post

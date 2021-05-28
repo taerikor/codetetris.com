@@ -2,6 +2,8 @@ import React from "react"
 import { kebabCase } from "lodash"
 import { Link } from "gatsby"
 
+import PropTypes from 'prop-types'
+
 import "./index.css"
 
 const Tag = ({ name }) => {
@@ -14,6 +16,10 @@ const Tag = ({ name }) => {
          </div>
       </Link>
   )
+}
+
+Tag.propTypes = {
+  name: PropTypes.string.isRequired,
 }
 
 export default Tag

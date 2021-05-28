@@ -1,5 +1,6 @@
 import React from 'react'
 import { rhythm } from '../../utils/typography'
+import PropTypes from 'prop-types'
 
 import './index.css'
 
@@ -13,3 +14,7 @@ export const Footer = ({title}) => (
         ©{title} All rights reserved
     </div>
 )
+
+Footer.propTypes = {
+    title: PropTypes.string.isRequired,
+}
