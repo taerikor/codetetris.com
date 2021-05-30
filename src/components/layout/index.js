@@ -4,9 +4,6 @@ import { useStaticQuery, Link, graphql } from "gatsby"
 import { rhythm } from "../../utils/typography"
 import { Footer } from '../footer'
 
-import './index.css'
-
-
 export default function Layout({ children }) {
   const data = useStaticQuery(
     graphql`

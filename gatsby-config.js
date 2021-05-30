@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `CODE TETRIS`,
-    description: `개발 그것은...`,
+    description: `Let's talk development`,
     author: `Taeri Kim`,
     keywords: [
       `blog`,
@@ -9,9 +9,9 @@ module.exports = {
       `typescript`,
       `web`,
       `react`,
-      `vue`,
       `frontend`,
       `development`,
+      `gatsby`,
     ],
   },
   plugins: [
@@ -44,6 +44,20 @@ module.exports = {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-webfonts`,
+      options: {
+        fonts: {
+          google2: [
+            {
+              family: "Merriweather Sans",
+              axes: "wght@800",
+              fontDisplay: 'swap',
+            },
+          ],
+        },
       },
     },
   ],

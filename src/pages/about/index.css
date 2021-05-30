@@ -18,14 +18,14 @@
   display: flex;
   justify-content: space-around;
   font-size: 18px;
-  font-family: "Merriweather Sans", sans-serif;
 }
-
+.meta_container {
+  text-align: center;
+}
 .meta_info {
-  padding: 10px;
+  white-space: pre;
 }
 
 .meta_name {
-  text-align: center;
   margin: 30px;
 }
