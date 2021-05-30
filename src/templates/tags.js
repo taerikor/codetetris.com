@@ -38,7 +38,7 @@ const Tags = ({ pageContext, data }) => {
             title={node.frontmatter.title}
             date={node.frontmatter.date}
             description={node.frontmatter.description}
-            tags={node.frontmatter.tags}
+            tags={node.frontmatter?.tags}
           />
         )
       })}

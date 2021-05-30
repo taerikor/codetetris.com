@@ -37,7 +37,7 @@ const Post = ({ slug, title, date, description, tags }) => {
           marginBottom: rhythm(1 / 4),
         }}
       >
-        {tags.map(tag => (
+        {tags?.map(tag => (
           <Tag name={tag} />
         ))}
       </div>

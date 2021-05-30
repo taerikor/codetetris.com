@@ -1,9 +1,10 @@
 ---
-title: The WET Codebase
+title: JavaScript를 소개합니다!
 description: 테스트 게시글 입니다.
-date: 2021-05-11
+date: 2021-06-01
 tags:
-  - 자바스크립트
+  - JavaScript
+  - Intro
 ---
 
 # hello?

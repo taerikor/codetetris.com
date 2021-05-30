@@ -7,7 +7,7 @@ export default function NotFoundPage() {
     <Layout>
       <SEO title={`404`} />
       <h1>Not Found</h1>
-      <p>I haven’t written this post yet. Will you help me write it?</p>
+      <p>I haven’t written this post yet.</p>
     </Layout>
   )
 }

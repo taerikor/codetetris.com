@@ -36,7 +36,7 @@ export default function BlogPost({ data }) {
             marginBottom: rhythm(1),
           }}
         >
-          {post.frontmatter.tags.map(tag => (
+          {post.frontmatter.tags?.map(tag => (
             <Tag name={tag} />
           ))}
         </div>
