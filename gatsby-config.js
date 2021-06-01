@@ -30,6 +30,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-feed`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-gtag`,
       options: {
