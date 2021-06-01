@@ -1,6 +1,6 @@
 ---
 title: 블로그를 개설하며...
-description: 테스트 게시글입니다.
+description: 이걸 굳이 만들었어야 했을까?
 date: 2021-05-30
 ---
 

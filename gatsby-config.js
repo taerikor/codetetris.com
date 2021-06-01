@@ -3,6 +3,7 @@ module.exports = {
     title: `CODE TETRIS`,
     description: `Let's talk development`,
     author: `Taeri Kim`,
+    siteUrl: `https://codetetris.com`,
     keywords: [
       `blog`,
       `javascript`,
@@ -28,6 +29,15 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-feed`,
+    {
+      resolve: `gatsby-plugin-gtag`,
+      options: {
+        trackingId: `G-H8GVSXRKTD`, 
+        head: false, 
+        anonymize: true,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -40,6 +50,7 @@ module.exports = {
         icon: `src/images/icon.png`,
       },
     },
+    'gatsby-plugin-offline',
     {
       resolve: `gatsby-plugin-typography`,
       options: {

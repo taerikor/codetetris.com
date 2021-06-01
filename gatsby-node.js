@@ -5,7 +5,6 @@ const { kebabCase } = require("lodash")
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
   if (node.internal.type === `MarkdownRemark`) {
-    console.log(node.internal.type)
     const slug = createFilePath({ node, getNode, basePath: `pages` })
     createNodeField({
       node,

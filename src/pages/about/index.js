@@ -27,7 +27,8 @@ export default function About() {
           <h4 className="meta_name">Taeri Kim</h4>
           <span className="meta_info">
             {
-` 공부는 단 한 번도 쉬운 적이 없고 눈을 뜨면 또 새로운 것이 생깁니다.
+` 공부는 단 한 번도 쉬운 적이 없고 
+눈을 뜨면 또 새로운 것이 생깁니다.
 적어도 개발에 부딪히는 건 꽤 재밌습니다.
 수많은 코드들을 보고 있으면 내가 카이사르 라도 된 기분입니다.
 테트리스 하듯 쌓아가다 보니 군데군데 잘못 맞춰져 있는 곳이 많습니다.
