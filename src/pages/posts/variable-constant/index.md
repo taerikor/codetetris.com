@@ -4,6 +4,7 @@ description: feat. scope와 hoisting
 date: 2021-06-07
 tags:
   - ES6
+  - JavaScript
 ---
 
 ![thumbnail](./thumbnail02.jpg)
