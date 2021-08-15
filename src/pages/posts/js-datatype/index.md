@@ -7,6 +7,8 @@ tags:
   - JavaScript
 ---
 
+![js](../../../images/js_logo.png)
+
 이전 포스팅 [JavsScript를 소개합니다!](https://www.codetetris.com/posts/js-introduction/) 를 보면 Brendan Eich가 초기 자바스크립트를 만들었다고 서술하였는데 그 기간이 10일이 걸렸다고 합니다. 지금의 자바스크립트는 상당히 진화하였지만 자료형을 보면 조금은 혼란스러움이 느껴집니다.  
 그동안 수많은 사람들의 손을 거쳐 탄생한 **자료형 7가지**를 살펴보겠습니다.
 
