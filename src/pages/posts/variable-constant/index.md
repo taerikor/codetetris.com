@@ -7,7 +7,7 @@ tags:
   - JavaScript
 ---
 
-![thumbnail](./thumbnail02.jpg)
+![thumbnail](./thumb.png)
 
 **변수**(variable)'은 value를 저장할 때 쓰이는 이름표입니다.
 정리를 할 때 상자에 이름을 적고(**선언**) 그 안에 내용물을 담는다(**할당**)고 비유하는 경우가 많습니다.
@@ -96,6 +96,7 @@ var는 함수 내에서 선언되지 않았다면 스크립트가 시작될 때 
 
 ### let vs var
 
+![wolf](./wolf.jpg)
 es6에서 let이 나온 이후 var는 거의 사용되지 않고 있습니다. 하지만 그 이전에 작성된 코드를 봐야 할 일이 아직은 꼭 생길 테고 어느 정도 이해를 하고 것이 도움이 됩니다.
 
 ## const

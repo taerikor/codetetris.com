@@ -6,7 +6,7 @@ tags:
   - JavaScript
 ---
 
-![js](./js02.png)
+![thumbnail](./thumb.png)
 
 ## 자바스크립트란?
 

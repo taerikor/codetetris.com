@@ -6,7 +6,7 @@ tags:
   - JavaScript
 ---
 
-![js](../../../images/js_logo.png)
+![thumbnail](./thumb.png)
 
 처음 자바스크립트에 입문하던 날로 돌아가 봅시다.  
 제일 인상 깊었던 것은 변수를 선언하고 그곳에 `document.querySelector('....')` 라는 이상한 문장을 할당하니 **HTML tag**가 나오는 것이었습니다.  

@@ -23,3 +23,8 @@ a {
 .tag_header span:hover {
   opacity: 0.7;
 }
+
+.gatsby-resp-image-wrapper a {
+  all: unset;
+  cursor: pointer;
+}
