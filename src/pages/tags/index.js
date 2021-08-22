@@ -22,6 +22,11 @@ export default function Tags({ data }) {
   return (
     <Layout>
       <SEO title={`Tags`} />
+      <div
+      style={{
+        height: '70vh'
+      }}
+      >
       <h2
         style={{
           marginBottom: rhythm(1.5),
@@ -41,6 +46,7 @@ export default function Tags({ data }) {
           >{`${item.tag} (${item.totalCount})`}</Link>
         </div>
       ))}
+      </div>
     </Layout>
   )
 }
