@@ -3,5 +3,9 @@
   bottom: 0;
   width: 100%;
   text-align: center;
-  font-size: 12px;
+  font-size: 1em;
+  color: white;
+  background-color: #2797ff;
+  border-top: 18px white dashed;
+  padding: 20px;
 }

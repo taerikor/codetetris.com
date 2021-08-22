@@ -3,6 +3,7 @@ import { useStaticQuery, Link, graphql } from "gatsby"
 
 import { rhythm } from "../../utils/typography"
 import { Footer } from '../footer'
+import { Header } from '../header'
 
 export default function Layout({ children }) {
   const data = useStaticQuery(
@@ -18,12 +19,14 @@ export default function Layout({ children }) {
     `
   )
   return (
+    <>
+    <Header />
     <div
       style={{
         margin: "0 auto",
         maxWidth: '700px',
         padding: rhythm(1),
-        paddingTop: rhythm(1.5),
+        paddingTop: rhythm(1),
       }}
     >
       <div
@@ -40,7 +43,7 @@ export default function Layout({ children }) {
             <h1
               style={{
                 margin: 0,
-                fontSize: '35px',
+                fontSize: '40px',
                 letterSpacing:` -4px`,
                 wordSpacing:`10px`,
                 color: '#263959',
@@ -72,18 +75,19 @@ export default function Layout({ children }) {
             float: `right`,
           }}
         >
-          <Link
+          {/* <Link
             to={`/tags`}
             className='tag_header'
           >
             <span>
               TAG
             </span>
-          </Link>
+          </Link> */}
         </div>
       </div>
       {children}
-      <Footer title={data.site.siteMetadata.title} />
     </div>
+      <Footer title={data.site.siteMetadata.title} />
+    </>
   )
 }
