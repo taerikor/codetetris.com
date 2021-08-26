@@ -8,8 +8,8 @@ tags:
 
 ![thumbnail](./thumb.png)
 
-**Webpack**을 처음 접한 것이 아마 React를 시작했을 때였습니다.  
-**CRA**(Create-React-App)로 상 다 차려 주면 떠먹을 줄만 알았던 그땐 (물론 지금도) 안 보였던 것들이 Vanila JS에 Gulp를 세팅해보면서 조금씩 보이기 시작했습니다.  
+[Webpack](https://webpack.js.org/)을 처음 접한 것이 아마 React를 시작했을 때였습니다.  
+[CRA](https://github.com/facebook/create-react-app)로 상 다 차려 주면 떠먹을 줄만 알았던 그땐 (물론 지금도) 안 보였던 것들이 Vanila JS에 [Gulp](https://gulpjs.com/)를 세팅해보면서 조금씩 보이기 시작했습니다.  
 Webpack이나 Gulp나 결국은 우리의 환경과 문제점을 개선하기 위함인건 틀림없기에 그 의도가 나의 상황과 맞아떨어졌을 때 더욱 크게 다가옵니다.
 
 ## Webpack
@@ -109,7 +109,7 @@ module.exports = {
 ### Mode
 
 현재 환경에 따라 **Mode**를 설정하여 변경되게 할 수 있습니다.  
-디폴트는 **'production'**으로 설정됩니다.
+디폴트는 **production**으로 설정됩니다.
 
 ```js
 module.exports = {
