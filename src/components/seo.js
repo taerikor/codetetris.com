@@ -21,7 +21,7 @@ function SEO({ description, lang, meta, title }) {
 
   const metaDescription = description || site.siteMetadata.description
   const keywords = site.siteMetadata.keywords
-
+  console.log(keywords.join(`, `))
   return (
     <Helmet
       htmlAttributes={{
@@ -62,15 +62,16 @@ function SEO({ description, lang, meta, title }) {
           name: `twitter:description`,
           content: metaDescription,
         },
-      ].concat(
-        keywords.length > 0
-          ? {
-              name: `keywords`,
-              content: keywords.join(`, `),
-            }
-          : []
-      )
-      .concat(meta)}
+      ]
+        .concat(
+          keywords.length > 0
+            ? {
+                name: `keywords`,
+                content: keywords.join(`, `),
+              }
+            : []
+        )
+        .concat(meta)}
     />
   )
 }

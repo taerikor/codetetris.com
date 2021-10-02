@@ -33,7 +33,7 @@ const customer1 = {
 
 관련된 데이터들을 모아 더욱 이해하기 쉬워 보입니다.
 
-```js
+```javascript{numberLines: true}
 customer1.name //taeri
 customer1["gender"] // male
 customer1.age // 25
