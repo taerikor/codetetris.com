@@ -4,7 +4,6 @@ module.exports = {
     description: `Let's talk development`,
     author: `Taeri Kim`,
     siteUrl: `https://codetetris.com`,
-    gitUrl: `https://github.com/taerikor/gatsby-blog.git`,
     keywords: [
       `blog`,
       `javascript`,
@@ -37,9 +36,9 @@ module.exports = {
             },
           },
           {
-            resolve: 'gatsby-remark-prismjs',
+            resolve: "gatsby-remark-prismjs",
             options: {
-              inlineCodeMarker: '÷',
+              inlineCodeMarker: "÷",
             },
           },
         ],
@@ -48,13 +47,64 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-feed`,
     `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+            {
+              site {
+                siteMetadata {
+                  title
+                  description
+                  siteUrl
+                  site_url: siteUrl
+                }
+              }
+            }
+          `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.edges.map(edge => {
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.excerpt,
+                  date: edge.node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                })
+              })
+            },
+            query: `
+                {
+                  allMarkdownRemark(
+                    sort: { order: DESC, fields: [frontmatter___date] },
+                  ) {
+                    edges {
+                      node {
+                        excerpt
+                        html
+                        fields { slug }
+                        frontmatter {
+                          title
+                          date
+                        }
+                      }
+                    }
+                  }
+                }
+              `,
+            output: "/rss.xml",
+            title: "Codetetris RSS Feed",
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-gtag`,
       options: {
-        trackingId: `G-H8GVSXRKTD`, 
-        head: false, 
+        trackingId: `G-H8GVSXRKTD`,
+        head: false,
         anonymize: true,
       },
     },
@@ -70,7 +120,7 @@ module.exports = {
         icon: `src/images/icon.png`,
       },
     },
-    'gatsby-plugin-offline',
+    "gatsby-plugin-offline",
     {
       resolve: `gatsby-plugin-typography`,
       options: {
@@ -85,7 +135,7 @@ module.exports = {
             {
               family: "Merriweather Sans",
               axes: "wght@800",
-              fontDisplay: 'swap',
+              fontDisplay: "swap",
             },
           ],
         },

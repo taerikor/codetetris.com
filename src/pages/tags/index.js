@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import { kebabCase } from "lodash"
-import { rhythm } from '../../utils/typography'
+import { rhythm } from "../../utils/typography"
 
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
@@ -22,30 +22,26 @@ export default function Tags({ data }) {
   return (
     <Layout>
       <SEO title={`Tags`} />
-      <div
-      style={{
-        height: '70vh'
-      }}
-      >
-      <h2
-        style={{
-          marginBottom: rhythm(1.5),
-        }}
-      >
-        Tags
-      </h2>
-      {tagsArray.map(item => (
-        <div
-          key={item.tag}
+      <div>
+        <h2
           style={{
-            marginBottom: rhythm(0.2),
+            marginBottom: rhythm(1.5),
           }}
         >
-          <Link
-            to={`/tag/${kebabCase(item.tag)}/`}
-          >{`${item.tag} (${item.totalCount})`}</Link>
-        </div>
-      ))}
+          Tags
+        </h2>
+        {tagsArray.map(item => (
+          <div
+            key={item.tag}
+            style={{
+              marginBottom: rhythm(0.2),
+            }}
+          >
+            <Link
+              to={`/tag/${kebabCase(item.tag)}/`}
+            >{`${item.tag} (${item.totalCount})`}</Link>
+          </div>
+        ))}
       </div>
     </Layout>
   )

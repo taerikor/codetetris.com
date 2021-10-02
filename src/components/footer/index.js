@@ -1,24 +1,17 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react"
+import PropTypes from "prop-types"
 
+import "./index.css"
+import { Link } from "gatsby"
 
-import './index.css'
-
-export const Footer = ({gitUrl}) => {
-    console.log(`${gitUrl}`)
-    return (
-    <div
-    className='footer_container'
-    >
-        <a href={`${gitUrl}`} 
-           target="_blank" 
-           rel="noopener noreferrer"
-        >
-            Github
-        </a>
+export const Footer = ({ title }) => {
+  return (
+    <div className="footer_container">
+      ©<Link to="/rss.xml">{title}</Link> All rights reserved
     </div>
-)}
+  )
+}
 
 Footer.propTypes = {
-    gitUrl: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
 }
