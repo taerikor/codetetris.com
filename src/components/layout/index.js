@@ -13,6 +13,7 @@ export default function Layout({ children }) {
           siteMetadata {
             title
             author
+            gitUrl
           }
         }
       }
@@ -70,24 +71,10 @@ export default function Layout({ children }) {
             </Link>
           </span>
         </div>
-        <div
-          style={{
-            float: `right`,
-          }}
-        >
-          {/* <Link
-            to={`/tags`}
-            className='tag_header'
-          >
-            <span>
-              TAG
-            </span>
-          </Link> */}
-        </div>
       </div>
       {children}
     </div>
-      <Footer title={data.site.siteMetadata.title} />
+      <Footer gitUrl={data.site.siteMetadata.gitUrl} />
     </>
   )
 }

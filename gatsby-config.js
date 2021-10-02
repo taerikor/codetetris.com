@@ -4,6 +4,7 @@ module.exports = {
     description: `Let's talk development`,
     author: `Taeri Kim`,
     siteUrl: `https://codetetris.com`,
+    gitUrl: `https://github.com/taerikor/gatsby-blog.git`,
     keywords: [
       `blog`,
       `javascript`,

@@ -49,7 +49,7 @@ const Post = ({ slug, title, date, description, tags }) => {
 Post.propTypes = {
   slug: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  date: PropTypes.number.isRequired, 
+  date: PropTypes.string.isRequired, 
   description: PropTypes.string.isRequired,
   tags: PropTypes.array,
 

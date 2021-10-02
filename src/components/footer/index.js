@@ -1,17 +1,24 @@
 import React from 'react'
-import { rhythm } from '../../utils/typography'
 import PropTypes from 'prop-types'
+
 
 import './index.css'
 
-export const Footer = ({title}) => (
+export const Footer = ({gitUrl}) => {
+    console.log(`${gitUrl}`)
+    return (
     <div
     className='footer_container'
     >
-        ©{title} All rights reserved
+        <a href={`${gitUrl}`} 
+           target="_blank" 
+           rel="noopener noreferrer"
+        >
+            Github
+        </a>
     </div>
-)
+)}
 
 Footer.propTypes = {
-    title: PropTypes.string.isRequired,
+    gitUrl: PropTypes.string.isRequired,
 }
