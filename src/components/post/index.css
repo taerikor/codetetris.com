@@ -1,8 +1,19 @@
-.title {
+.post .title {
+  margin-bottom: 0.2rem;
   font-size: 30px;
   color: #2797ff;
 }
 
 .title:hover {
   color: #73c7ff;
+}
+
+.post .date {
+  color: #666;
+  font-size: 13px;
+  margin-bottom: 0.4rem;
+}
+
+.post .tags_box {
+  margin-bottom: 0.4rem;
 }

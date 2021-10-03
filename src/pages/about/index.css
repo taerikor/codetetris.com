@@ -1,6 +1,7 @@
 .topic_container {
   display: flex;
   justify-content: center;
+  margin-bottom: 1.8rem;
 }
 .topic {
   font-size: 40px;
@@ -21,7 +22,8 @@
 }
 .meta_container {
   text-align: center;
-  margin: 30px 0;
+  margin: 20px 0;
+  margin-bottom: 4rem;
 }
 .meta_info {
   white-space: pre;
