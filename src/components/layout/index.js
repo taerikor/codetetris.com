@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { useStaticQuery, Link, graphql } from "gatsby"
 
 import { rhythm } from "../../utils/typography"
