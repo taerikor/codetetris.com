@@ -25,6 +25,7 @@ module.exports = {
     },
     `gatsby-plugin-preact`,
     `gatsby-plugin-sharp`,
+    "gatsby-remark-embed-video",
     {
       resolve: `gatsby-transformer-remark`,
       options: {
