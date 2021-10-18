@@ -2,13 +2,13 @@ import React from "react"
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
 import { Link } from "gatsby"
 
-import "./index.css"
+import * as headerStyles from "./header.module.css"
 
 export const Header = () => {
   return (
-    <div className="header">
-      <Link to={`/tags`} className="tag_header">
-        <span>TAG</span>
+    <div className={headerStyles.header}>
+      <Link to={`/tags`} className={headerStyles.tag}>
+        TAG
       </Link>
       <ThemeToggler>
         {({ theme, toggleTheme }) => {
@@ -17,6 +17,7 @@ export const Header = () => {
           }
           return (
             <span
+              className={headerStyles.themeSwitch}
               onClick={() =>
                 theme === "light" ? toggleTheme("dark") : toggleTheme("light")
               }

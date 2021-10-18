@@ -2,23 +2,24 @@ import React from "react"
 import { Link } from "gatsby"
 import Tag from "../tag"
 
-import "./index.css"
+import * as postStyles from "./post.module.css"
+
 import PropTypes from "prop-types"
 
 const Post = ({ slug, title, date, description, tags }) => {
   return (
-    <div className="post">
+    <>
       <Link to={slug}>
-        <h2 className="title">{title}</h2>
+        <h2 className={postStyles.title}>{title}</h2>
       </Link>
-      <p className="date">{date}</p>
-      <div className="tags_box">
+      <p className={postStyles.date}>{date}</p>
+      <div className={postStyles.tags}>
         {tags?.map(tag => (
           <Tag name={tag} />
         ))}
       </div>
       <span>{description}</span>
-    </div>
+    </>
   )
 }
 

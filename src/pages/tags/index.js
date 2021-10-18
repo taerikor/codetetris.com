@@ -24,7 +24,7 @@ export default function Tags({ data }) {
       <div className="tags_container">
         <h2>Tags</h2>
         {tagsArray.map(item => (
-          <div className="tags" key={item.tag}>
+          <div key={item.tag}>
             <Link
               to={`/tag/${kebabCase(item.tag)}/`}
             >{`${item.tag} (${item.totalCount})`}</Link>

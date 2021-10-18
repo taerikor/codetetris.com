@@ -1,34 +1,35 @@
-.topic_container {
+.topic {
   display: flex;
   justify-content: center;
   margin-bottom: 1.8rem;
 }
-.topic {
+.topic__text {
   font-size: 40px;
   color: #6666;
   text-align: center;
   line-height: 40px;
 }
 
-.bio_container {
+.bio {
   display: flex;
   flex-direction: column;
 }
 
-.link_container {
+.link {
   display: flex;
   justify-content: space-around;
   font-size: 18px;
+  font-family: "Merriweather Sans", sans-serif;
 }
-.meta_container {
-  text-align: center;
+.meta {
   margin: 20px 0;
   margin-bottom: 4rem;
 }
-.meta_info {
+.meta__content {
   white-space: pre;
 }
 
-.meta_name {
+.meta__name {
+  text-align: center;
   margin: 30px;
 }

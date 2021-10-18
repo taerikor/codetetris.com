@@ -4,7 +4,7 @@ import { useStaticQuery, Link, graphql } from "gatsby"
 import { Footer } from "../footer"
 import { Header } from "../header"
 
-import "./index.css"
+import * as layoutStyles from "./layout.module.css"
 
 export default function Layout({ children }) {
   const data = useStaticQuery(
@@ -22,14 +22,16 @@ export default function Layout({ children }) {
   return (
     <>
       <Header />
-      <div className="layout_content">
-        <div className="title_container">
+      <div className={layoutStyles.content}>
+        <div className={layoutStyles.title}>
           <Link to={`/`}>
-            <h1 className="layout_title">{data.site.siteMetadata.title}</h1>
+            <h1 className={layoutStyles.title__text}>
+              {data.site.siteMetadata.title}
+            </h1>
           </Link>
-          <span className="author_header">
+          <span className={layoutStyles.title__author}>
             by{" "}
-            <Link className="author_name_link" to="/about">
+            <Link className={layoutStyles.author__name} to="/about">
               {data.site.siteMetadata.author}
             </Link>
           </span>

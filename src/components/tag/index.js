@@ -1,20 +1,15 @@
 import React from "react"
 import { kebabCase } from "lodash"
 import { Link } from "gatsby"
+import * as tagStyles from "./tag.module.css"
 
-import PropTypes from 'prop-types'
-
-import "./index.css"
+import PropTypes from "prop-types"
 
 const Tag = ({ name }) => {
   return (
-      <Link
-      className="tag_link"
-      to={`/tag/${kebabCase(name)}/`}>
-         <div className="tag_container">
-        {name}
-         </div>
-      </Link>
+    <Link className={tagStyles.link} to={`/tag/${kebabCase(name)}/`}>
+      <div className={tagStyles.container}>{name}</div>
+    </Link>
   )
 }
 

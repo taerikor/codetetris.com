@@ -1,4 +1,4 @@
-.layout_content {
+.content {
   margin: 0 auto;
   max-width: 700px;
   min-height: 90vh;
@@ -6,7 +6,7 @@
   padding-top: 2rem;
 }
 
-.layout_title {
+.title__text {
   margin: 0;
   font-size: 40px;
   letter-spacing: -4px;
@@ -14,15 +14,16 @@
   color: #263959;
 }
 
-.author_header {
+.title__author {
   margin-top: 5px;
 }
 
-.author_name_link {
+.author__name {
   color: #006acb;
   letter-spacing: -1px;
+  font-family: "Merriweather Sans", sans-serif;
 }
 
-.layout_content .title_container {
+.title {
   margin-bottom: 2rem;
 }

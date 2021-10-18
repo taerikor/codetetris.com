@@ -1,14 +1,16 @@
-/* a {
-  color: black;
-} */
+body {
+  background-color: var(--bg);
+  transition: background 0.3s ease, color 0.3s ease;
+}
 
-.author_header,
-.tag_header span,
-.theme_switch,
-.tag_container,
-.link_container,
-.footer_container {
-  font-family: "Merriweather Sans", sans-serif;
+body.light {
+  --bg: #ffffff;
+}
+
+body.dark {
+  -webkit-font-smoothing: antialiased;
+
+  --bg: #222831;
 }
 
 .gatsby-resp-image-wrapper a {
