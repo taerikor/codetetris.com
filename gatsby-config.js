@@ -47,6 +47,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-dark-mode`,
     `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-feed`,

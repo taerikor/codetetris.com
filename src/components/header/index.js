@@ -1,31 +1,31 @@
-import React, { useState } from "react"
+import React from "react"
+import { ThemeToggler } from "gatsby-plugin-dark-mode"
 import { Link } from "gatsby"
 
 import "./index.css"
-import "../../utils/theme.css"
 
 export const Header = () => {
-  const [isDark, setIsDark] = useState(false)
-
-  const onThemeClick = () => {
-    const THEME_DARK = "dark"
-    if (isDark === false) {
-      document.body.classList.add(THEME_DARK)
-      setIsDark(true)
-    } else {
-      document.body.classList.remove(THEME_DARK)
-      setIsDark(false)
-    }
-  }
-
   return (
     <div className="header">
       <Link to={`/tags`} className="tag_header">
         <span>TAG</span>
       </Link>
-      {/* <span onClick={onThemeClick} className="theme_switch">
-        {isDark ? "DARK" : "LIGHT"}
-      </span> */}
+      <ThemeToggler>
+        {({ theme, toggleTheme }) => {
+          if (theme == null) {
+            return null
+          }
+          return (
+            <span
+              onClick={() =>
+                theme === "light" ? toggleTheme("dark") : toggleTheme("light")
+              }
+            >
+              {theme === "light" ? "DARK" : "LIGHT"}
+            </span>
+          )
+        }}
+      </ThemeToggler>
     </div>
   )
 }
