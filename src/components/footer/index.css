@@ -6,10 +6,13 @@
   border-top: 18px white dashed;
   color: white;
   text-align: center;
-  padding: 10px 0;
+  padding: 10px 20px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .footer_container a {
-  margin-right: 10px;
+  margin-left: 10px;
   color: white;
 }
