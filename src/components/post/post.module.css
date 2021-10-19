@@ -1,19 +1,23 @@
 .title {
   margin-bottom: 0.2rem;
   font-size: 30px;
-  color: #2797ff;
+  color: var(--main-color);
 }
 
 .title:hover {
-  color: #73c7ff;
+  color: var(--main-hover-color);
 }
 
 .date {
-  color: #666;
+  color: var(--date-color);
   font-size: 13px;
   margin-bottom: 0.4rem;
 }
 
 .tags {
   margin-bottom: 0.4rem;
+}
+
+.desc {
+  color: var(--text-color);
 }

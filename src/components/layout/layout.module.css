@@ -11,7 +11,7 @@
   font-size: 40px;
   letter-spacing: -4px;
   word-spacing: 10px;
-  color: #263959;
+  color: var(--title-color);
 }
 
 .title__author {
@@ -19,11 +19,12 @@
 }
 
 .author__name {
-  color: #006acb;
+  color: var(--author-color);
   letter-spacing: -1px;
   font-family: "Merriweather Sans", sans-serif;
 }
 
 .title {
   margin-bottom: 2rem;
+  color: var(--text-color);
 }

@@ -18,7 +18,7 @@ const Post = ({ slug, title, date, description, tags }) => {
           <Tag name={tag} />
         ))}
       </div>
-      <span>{description}</span>
+      <span className={postStyles.desc}>{description}</span>
     </>
   )
 }

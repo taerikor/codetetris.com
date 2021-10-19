@@ -5,12 +5,44 @@ body {
 
 body.light {
   --bg: #ffffff;
+  --main-color: #2797ff;
+  --header-font-color: #ffffff;
+  --author-color: #006acb;
+  --title-color: #263959;
+  --main-hover-color: #73c7ff;
+  --date-color: #666;
+  --border-color: rgba(0, 0, 0, 0.2);
+  --text-color: black;
+  --topic-color: #6666;
+  --box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 body.dark {
   -webkit-font-smoothing: antialiased;
 
   --bg: #222831;
+  --main-color: #ea80fc;
+  --header-font-color: #121212;
+  --author-color: #d48bf9;
+  --title-color: #ffb2ff;
+  --main-hover-color: #ffb2ff;
+  --date-color: rgb(199, 197, 197);
+  --border-color: #ffffff;
+  --text-color: #ffff;
+  --topic-color: #6666;
+  --box-shadow: -2px -1px 10px 5px rgba(167, 164, 164, 0.35);
+}
+
+p,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--text-color);
+}
+
+a {
+  color: var(--main-color);
 }
 
 .gatsby-resp-image-wrapper a {

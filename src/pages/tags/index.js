@@ -21,7 +21,7 @@ export default function Tags({ data }) {
   return (
     <Layout>
       <SEO title={`Tags`} />
-      <div className="tags_container">
+      <div>
         <h2>Tags</h2>
         {tagsArray.map(item => (
           <div key={item.tag}>

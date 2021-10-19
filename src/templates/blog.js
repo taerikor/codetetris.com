@@ -1,11 +1,11 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { rhythm } from '../utils/typography'
+import { rhythm } from "../utils/typography"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Tag from "../components/tag"
-import Utterances from '../components/utterances'
+import Utterances from "../components/utterances"
 
 export default function BlogPost({ data }) {
   const post = data.markdownRemark
@@ -16,14 +16,14 @@ export default function BlogPost({ data }) {
         <h1
           style={{
             marginBottom: rhythm(0.5),
-            color: "black",
+            color: "var(--text-color)",
           }}
         >
           {post.frontmatter.title}
         </h1>
         <p
           style={{
-            color: `#bbb`,
+            color: `var(--date-color)`,
             fontSize: `15px`,
             marginBottom: rhythm(0.5),
           }}
@@ -40,7 +40,12 @@ export default function BlogPost({ data }) {
             <Tag name={tag} />
           ))}
         </div>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div
+          style={{
+            color: `var(--text-color)`,
+          }}
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
         <h3>Comments</h3>
         <Utterances repo="taerikor/blog-comments" theme="github-light" />
       </div>

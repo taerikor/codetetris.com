@@ -5,7 +5,7 @@
 }
 .topic__text {
   font-size: 40px;
-  color: #6666;
+  color: var(--topic-color);
   text-align: center;
   line-height: 40px;
 }
@@ -24,6 +24,7 @@
 .meta {
   margin: 20px 0;
   margin-bottom: 4rem;
+  color: var(--text-color);
 }
 .meta__content {
   white-space: pre;
