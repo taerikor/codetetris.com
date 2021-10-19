@@ -41,6 +41,12 @@ module.exports = {
               inlineCodeMarker: "%",
             },
           },
+          {
+            resolve: "gatsby-remark-external-links",
+            options: {
+              target: "_blank",
+            },
+          },
         ],
       },
     },

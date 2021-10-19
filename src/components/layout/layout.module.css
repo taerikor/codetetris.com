@@ -13,6 +13,9 @@
   word-spacing: 10px;
   color: var(--title-color);
 }
+.title__link {
+  width: 100px;
+}
 
 .title__author {
   margin-top: 5px;

@@ -24,7 +24,7 @@ export default function Layout({ children }) {
       <Header />
       <div className={layoutStyles.content}>
         <div className={layoutStyles.title}>
-          <Link to={`/`}>
+          <Link className={layoutStyles.title__link} to={`/`}>
             <h1 className={layoutStyles.title__text}>
               {data.site.siteMetadata.title}
             </h1>

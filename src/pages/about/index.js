@@ -34,8 +34,20 @@ export default function About() {
         </div>
       </div>
       <div className={aboutStyles.link}>
-        <a href="mailto:akdud153@gmail.com">Contact</a>
-        <Link to="https://github.com/taerikor">Git Hub</Link>
+        <a
+          href="mailto:akdud153@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Contact
+        </a>
+        <a
+          href="https://github.com/taerikor"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Git Hub
+        </a>
         {/* <Link 
         to=""
         style={{

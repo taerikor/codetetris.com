@@ -11,7 +11,13 @@ export const Footer = ({ title }) => {
       <Link to="/">{title}</Link>
       <div>
         <Link to="/rss.xml">RSS</Link>{" "}
-        <Link to="https://github.com/taerikor/codetetris.com">GITHUB</Link>
+        <a
+          href="https://github.com/taerikor/codetetris.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GITHUB
+        </a>
       </div>
     </div>
   )
