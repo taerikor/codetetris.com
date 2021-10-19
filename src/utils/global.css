@@ -26,14 +26,15 @@ body.dark {
   --author-color: #d48bf9;
   --title-color: #ffb2ff;
   --main-hover-color: #ffb2ff;
-  --date-color: rgb(199, 197, 197);
+  --date-color: rgba(199, 197, 197, 0.845);
   --border-color: #ffffff;
   --text-color: #ffff;
-  --topic-color: #6666;
+  --topic-color: rgba(225, 225, 225, 0.762);
   --box-shadow: -2px -1px 10px 5px rgba(167, 164, 164, 0.35);
 }
 
 p,
+h1,
 h2,
 h3,
 h4,
