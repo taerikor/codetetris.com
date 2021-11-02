@@ -43,7 +43,10 @@ h5 {
 }
 
 a {
-  color: var(--main-color);
+  color: var(--title-color);
+}
+img {
+  margin-bottom: 20px;
 }
 
 .gatsby-resp-image-wrapper a {
