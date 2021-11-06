@@ -3,7 +3,7 @@ title: Gatsby.js 블로그 제작기
 description: 정적 웹사이트의 트렌드, JAM Stack과 Deploy
 date: 2021-11-01
 tags:
-  - gatsby
+  - tool
   - blog
 ---
 

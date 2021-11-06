@@ -3,6 +3,7 @@ title: 여기 Webpack과 Babel은 뭔가요?
 description: Webpack core concept과 Babel, Polyfill의 핵심
 date: 2021-08-24
 tags:
+  - tool
   - JavaScript
 ---
 
