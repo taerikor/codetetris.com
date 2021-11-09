@@ -14,7 +14,7 @@ tags:
 ## Build Tool
 
 블로그를 빌드하기 위해 조금만 찾아봐도 주류로 사용되는 툴은 몇 가지 없다는 것을 알 수 있었습니다.  
-[Jekyll](https://jekyllrb.com/)을 사용한 블로그가 많았고 그것은 Ruby를 사용합니다. 손에 익은 **react**를 사용하길 원했습니다. 하지만 조금 더 검색엔진에 노출되기 위해 [CSR](https://developers.google.com/web/updates/2019/02/rendering-on-the-web?hl=ko)이 아닌 방법을 찾고 있었습니다.
+손에 익은 **react**를 사용하길 원했습니다. 하지만 조금 더 검색엔진에 노출되기 위해 [CSR](https://developers.google.com/web/updates/2019/02/rendering-on-the-web?hl=ko)이 아닌 방법을 찾고 있었습니다.
 
 ### Gatsby.js
 
