@@ -13,6 +13,8 @@
 .bio {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
 }
 
 .link {
@@ -22,12 +24,13 @@
   font-family: "Merriweather Sans", sans-serif;
 }
 .meta {
-  margin: 20px 0;
-  margin-bottom: 4rem;
   color: var(--text-color);
+  margin-top: 30px;
+  text-align: center;
 }
+
 .meta__content {
-  white-space: pre;
+  /* white-space: pre; */
 }
 
 .meta__name {
