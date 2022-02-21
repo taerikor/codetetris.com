@@ -61,23 +61,34 @@ console.log(isPositiveNum) //"40은 양수입니다"
 
 ## 숫자형(Number)
 
+숫자형에는 다양한 연산이 가능합니다. 대표적인 사칙연산에서 눈여겨 볼만한 상황이 있습니다.
+
+- 문자형과 숫자형의 덧셈 `+`은 숫자형이 문자형으로 형변환되어 문자형이 반환됩니다.
+- 다른 수학 연산자는 위와 같은 상황에서 문자형이 숫자형으로 형변환되어 연산됩니다.
+
+```js
+let stringPlusNumber = "10" + 5
+console.log(expression, typeof expression) //"105" string
+
+let stringMinusNumber = "10" - 5
+console.log(expression, typeof expression) //5 number
+```
+
 숫자형은 일반적인 숫자와 `Infinity`, `NaN` 같은 특수한 값이 있습니다.
 `Infinity`는 이름만 봐도 유추할 수 있듯이 **무한대**를 나타냅니다.  
 `NaN`은 **Not a Number**이라는 뜻으로 계산식에서 **결과가 숫자가 아닐때** 반환됩니다.
 
 ```js
-let expression = "10" - 5
-console.log(expression, typeof expression) //5 "number"
+let expression = 10 / 0
+console.log(expression) //Infinity
 ```
 
-자바스크립트에서는 문자형에 숫자를 연산할 경우 문자열을 숫자로 형변환 합니다.
+숫자형으로 형변환 하였지만 연산을 할 수 없는 경우 `NaN` 를 반환합니다.
 
 ```js
 let expression = "ten" - 5
 console.log(expression) //NaN
 ```
-
-하지만 숫자가 아닌 문자에 연산을 할 경우 `NaN` 를 반환합니다.
 
 ## BigInt
 
@@ -89,6 +100,8 @@ console.log(expression) //NaN
 
 `true`와 `false`를 반환하는 자료형 입니다.
 
+### 논리형으로 형변환
+
 ```js
 console.log(Boolean(-1)) // true
 console.log(Boolean(0)) // false
@@ -97,8 +110,8 @@ console.log(Boolean("string")) // true
 console.log(Boolean("")) // false
 ```
 
-0, 빈 문자열, `null`, `undefined`, `NaN`은 `false`  
-그 외에는 모두 `true`가 됩니다.
+- 0, 빈 문자열, `null`, `undefined`, `NaN`은 `false`
+- 그 외에는 모두 `true`가 됩니다.
 
 ### 논리연산자
 
